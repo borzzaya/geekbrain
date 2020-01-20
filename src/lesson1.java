@@ -10,8 +10,42 @@ public class lesson1 {
     8. * Написать метод, который определяет является ли год високосным, и выводит сообщение в консоль. Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
 
      */
-    
+
     public static void main(String[] args) {
+
+        //lesson1 l1 = new lesson1();
+        lesson2 l2 = new lesson2();
+
+        //l1.calc1(1,2,3,4);
+
+        System.out.println("========= Упражнение 1 ==================");
+        l2.ex1();
+
+        System.out.println("========= Упражнение 2 ==================");
+        l2.ex2();
+
+        System.out.println("========= Упражнение 3 ==================");
+        l2.ex3();
+
+        System.out.println("========= Упражнение 4 ==================");
+        l2.ex4();
+
+        System.out.println("========= Упражнение 5 ==================");
+        l2.ex5();
+
+        System.out.println("========= Упражнение 6 ==================");
+        int[] arr1 = {5, 6, 9, 3, 6, 0, 2, 4, 1};
+        int[] arr2 = {2, 2, 2, 1, 2, 2, 10, 1};
+        boolean ex6Res = l2.ex6(arr1);
+        System.out.println(ex6Res);
+        ex6Res = l2.ex6(arr2);
+        System.out.println(ex6Res);
+
+        System.out.println("========= Упражнение 7 ==================");
+        l2.ex7(arr1, -4);
+        l2.ex7(arr1, 3);
+    }
+    public void ex1() {
         byte a = 12;
         short b = 30000;
         int c = -128000;
