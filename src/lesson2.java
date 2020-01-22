@@ -14,6 +14,39 @@
 import java.util.Arrays;
 
 public class lesson2 {
+
+    public void lesson2Run() {
+
+        System.out.println("========= Упражнение 1 ==================");
+        ex1();
+
+        System.out.println("========= Упражнение 2 ==================");
+        ex2();
+
+        System.out.println("========= Упражнение 3 ==================");
+        ex3();
+
+        System.out.println("========= Упражнение 4 ==================");
+        ex4();
+
+        System.out.println("========= Упражнение 5 ==================");
+        ex5();
+
+        System.out.println("========= Упражнение 6 ==================");
+        int[] arr1 = {5, 6, 9, 3, 6, 0, 2, 4, 1};
+        int[] arr2 = {2, 2, 2, 1, 2, 2, 10, 1};
+        boolean ex6Res = ex6(arr1);
+        System.out.println(ex6Res);
+        ex6Res = ex6(arr2);
+        System.out.println(ex6Res);
+
+        System.out.println("========= Упражнение 7 ==================");
+        ex7(arr1, -4);
+        ex7(arr1, 3);
+    }
+
+
+
     public void ex1() {
         byte[] arr = {0, 1, 0, 0, 1, 1, 0};
         System.out.println(Arrays.toString(arr));
