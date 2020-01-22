@@ -3,8 +3,11 @@ public class main {
          //lesson1 lesson1 = new lesson1();
          //lesson1.lesson1Run();
 
-         lesson2 lesson2 = new lesson2();
-         lesson2.lesson2Run();
+         //lesson2 lesson2 = new lesson2();
+         //lesson2.lesson2Run();
+
+         classLesson3 lesson3 = new classLesson3();
+         lesson3.start();
 
     }
 }
