@@ -6,8 +6,11 @@ public class main {
          //lesson2 lesson2 = new lesson2();
          //lesson2.lesson2Run();
 
-         classLesson3 lesson3 = new classLesson3();
-         lesson3.start();
+         // classLesson3 lesson3 = new classLesson3();
+         // lesson3.start();a
+
+         classLesson4 lesson4 = new classLesson4();
+         lesson4.ticTacToe();
 
     }
 }
