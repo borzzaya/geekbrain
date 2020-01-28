@@ -30,12 +30,13 @@ public class classLesson4 {
 
         System.out.println("Введите размер поля от 3 до 10");
         this.fieldSize = getNumberFromScanner(3, 10);
+        int stepsMax = fieldSize * fieldSize;
 
         System.out.println("Введите длину серии для победы от 3 до " + this.fieldSize);
         int lengthForWin = getNumberFromScanner(3, this.fieldSize);
 
         boolean gameIsOver = false;
-        int row, col = 0;
+        int row, col, stepsCount = 0;
 
         this.field = new char[this.fieldSize][this.fieldSize];
         for (int i = 0; i < this.fieldSize; i++) {
@@ -58,18 +59,33 @@ public class classLesson4 {
                 System.out.println("Клетка занята");
                 continue;
             }
+            stepsCount++;
 
             gameIsOver = checkWin(lengthForWin);
             if (gameIsOver) {
                 showField();
                 System.out.println("Вы победили!");
+                continue;
+            }
+            if (stepsCount==stepsMax){
+                gameIsOver = true;
+                System.out.println("Ничья!");
+                continue;
             }
 
+
             moveComputer();
+            stepsCount++;
             gameIsOver = checkWin(lengthForWin);
             if (gameIsOver) {
                 showField();
                 System.out.println("Компьютер победил!");
+            }
+
+            if (stepsCount==stepsMax){
+                gameIsOver = true;
+                System.out.println("Ничья!");
+                continue;
             }
 
         }
@@ -102,11 +118,11 @@ public class classLesson4 {
         int valcnt = 0;
         for (int i = 0; i < fieldSize; i++) {
 
-            //  Прохдим строки
+            //  Проходим строки
             val = '*';
             valcnt = 0;
-            for (int j = 0; j < fieldSize - 1; j++) {
-
+            for (int j = 0; j < fieldSize; j++) {
+                //System.out.println("row=" + i + ";col=" + j);
                 if (field[i][j] == '*') {
                     val = '*';
                     valcnt = 0;
@@ -128,7 +144,7 @@ public class classLesson4 {
             // Проходим столбцы
             valcnt = 0;
             val = '*';
-            for (int j = 0; j < fieldSize - 1; j++) {
+            for (int j = 0; j < fieldSize; j++) {
 
                 if (field[j][i] == '*') {
                     val = '*';
