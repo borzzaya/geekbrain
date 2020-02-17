@@ -1,5 +1,6 @@
 import lesson6.Cat;
 import lesson6.Dog;
+import lesson8.window;
 
 public class main {
     public static void main(String[] args) {
@@ -86,35 +87,37 @@ public class main {
 //        System.out.println("Тузик пробежал 450 метров:" + Tuzik.run(450));
 //        System.out.println("Тузик проплыл 8 метров:" + Tuzik.swim(8));
 
-        lesson7.Cat cat = new lesson7.Cat("Barsik", 5);
-        lesson7.Plate plate1 = new lesson7.Plate(100);
-        plate1.info();
-        cat.eat(plate1);
-        cat.PrintSatiety();
-        plate1.info();
-
-        lesson7.Plate plate2 = new lesson7.Plate(4);
-        plate2.info();
-        cat.eat(plate2);
-        cat.PrintSatiety();
-        plate2.info();
-
-        lesson7.Cat[] Cats = new lesson7.Cat[5];
-        Cats[0] = new lesson7.Cat("Murzik", 20);
-        Cats[1] = new lesson7.Cat("Nura", 20);
-        Cats[2] = new lesson7.Cat("Pushok", 20);
-        Cats[3] = new lesson7.Cat("Marusya", 20);
-        Cats[4] = new lesson7.Cat("Nafanya", 20);
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Ест кот "+Cats[i].getName());
-            Cats[i].eat(plate1);
-            Cats[i].PrintSatiety();
-            plate1.info();
-        }
-
-        plate1.increaseFood(10);
-        plate1.info();
+//        lesson7.Cat cat = new lesson7.Cat("Barsik", 5);
+//        lesson7.Plate plate1 = new lesson7.Plate(100);
+//        plate1.info();
+//        cat.eat(plate1);
+//        cat.PrintSatiety();
+//        plate1.info();
+//
+//        lesson7.Plate plate2 = new lesson7.Plate(4);
+//        plate2.info();
+//        cat.eat(plate2);
+//        cat.PrintSatiety();
+//        plate2.info();
+//
+//        lesson7.Cat[] Cats = new lesson7.Cat[5];
+//        Cats[0] = new lesson7.Cat("Murzik", 20);
+//        Cats[1] = new lesson7.Cat("Nura", 20);
+//        Cats[2] = new lesson7.Cat("Pushok", 20);
+//        Cats[3] = new lesson7.Cat("Marusya", 20);
+//        Cats[4] = new lesson7.Cat("Nafanya", 20);
+//
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println("Ест кот "+Cats[i].getName());
+//            Cats[i].eat(plate1);
+//            Cats[i].PrintSatiety();
+//            plate1.info();
+//        }
+//
+//        plate1.increaseFood(10);
+//        plate1.info();
+        window myWindow = new window();
+        myWindow.setVisible(true);
 
     }
 }
